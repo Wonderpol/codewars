@@ -1,9 +1,10 @@
-import gravityFlip.Kata;
-import org.junit.Test;
+package gravityFlip;
 
-import static org.junit.Assert.assertArrayEquals;
+import org.junit.jupiter.api.Test;
 
-public class KataTest {
+import static org.junit.jupiter.api.Assertions.*;
+
+class KataTest {
     @Test
     public void Sample() {
         assertArrayEquals(new int[]{ 1,2,2,3 }, Kata.flip('R', new int[]{ 3,2,1,2 }));
