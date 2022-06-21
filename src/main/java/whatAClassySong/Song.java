@@ -18,6 +18,7 @@ public class Song {
         return artist;
     }
 
+    //TODO: refactor this method
     public int howMany(ArrayList<?> list) {
         return list.size();
     }
