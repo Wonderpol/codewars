@@ -1,9 +1,13 @@
 package whatAClassySong;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
 
 public class Song {
     private final String title;
     private final String artist;
+
+    private HashSet<String> listened = new HashSet<>();
 
     Song(final String title, final String artist) {
         this.title = title;
@@ -18,9 +22,10 @@ public class Song {
         return artist;
     }
 
-    //TODO: refactor this method
-    public int howMany(ArrayList<?> list) {
-        return list.size();
+    public int howMany(ArrayList<String> list) {
+        int actualLength = listened.size();
+        list.forEach(name -> listened.add(name.toLowerCase()));
+        return listened.size() - actualLength;
     }
 
 }
