@@ -11,7 +11,6 @@ public class Kata {
         if (s.charAt(0) == ' ' || s.charAt(s.length() - 1) == ' ') {
             return false;
         }
-
         int numberOfSpaces = (int) s.chars().filter(ch -> ch == ' ').count();
 
         String[] s1 = s.split(" ");
