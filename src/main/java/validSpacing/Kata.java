@@ -19,8 +19,4 @@ public class Kata {
 //        Better solution
 //        return !s.startsWith(" ") && !s.endsWith(" ") && !s.contains("  ");
     }
-
-    public static void main(String[] args) {
-        System.out.println(validSpacing("xgUuDy u 3"));
-    }
 }
