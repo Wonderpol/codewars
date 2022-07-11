@@ -1,4 +1,4 @@
-package Partlist;
+package partlist;
 
 import org.junit.jupiter.api.Test;
 
