@@ -37,7 +37,6 @@ public class Rank {
 
         return List.copyOf(sortedRanking.keySet()).get(n - 1);
     }
-
 }
 
 
