@@ -29,8 +29,4 @@ public class Order {
 
         return result.toString().trim();
     }
-
-    public static void main(String[] args) {
-        System.out.println(order("Thi1s Jac4ob moth3er fat2her"));
-    }
 }
