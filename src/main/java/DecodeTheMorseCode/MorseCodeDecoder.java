@@ -1,5 +1,6 @@
 package DecodeTheMorseCode;
 
+import java.io.FileNotFoundException;
 import java.util.Arrays;
 
 public class MorseCodeDecoder {
@@ -7,13 +8,19 @@ public class MorseCodeDecoder {
 
         final StringBuilder result = new StringBuilder();
 
-        String[] morseWords = morseCode.split("   ");
+        String[] morseWords = morseCode.trim().split("   ");
 
         for (String word : morseWords) {
             String[] letters = word.toLowerCase().split(" ");
             Arrays.stream(letters).
                     toList()
-                    .forEach(result.append());
+                    .forEach(s -> {
+                        try {
+                            result.append(MorseCode.get(s));
+                        } catch (FileNotFoundException e) {
+                            throw new RuntimeException(e);
+                        }
+                    });
             result.append(" ");
         }
 
