@@ -1,30 +1,28 @@
 package DecodeTheMorseCode;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 public class MorseCode {
 
     private static Map<String, String> letters;
+    private static final String FILE_PATH = "/Users/janpiaskowy/IdeaProjects/demo/Codewars/src/main/java/DecodeTheMorseCode/MorseCodeLetters.txt";
 
-    private static void getDataFromFile() throws FileNotFoundException {
+
+    private static void getDataFromFile() {
         final HashMap<String, String> result = new HashMap<>();
 
-        try (final BufferedReader bufferedReader = new BufferedReader(new FileReader("/Users/janpiaskowy/IdeaProjects/demo/Codewars/src/main/java/DecodeTheMorseCode/MorseCodeLetters.txt"))){
-
-            String line = bufferedReader.readLine();
-
-
-            while (line != null) {
-                String[] data = line.split(" ");
+        try (final Scanner scanner = new Scanner(new File(FILE_PATH))) {
+            while (scanner.hasNextLine()) {
+                String[] data = scanner.nextLine().split(" ");
                 result.put(data[1], data[0]);
-                line = bufferedReader.readLine();
             }
-
-        } catch (Exception e) {
+        } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
         letters = result;
