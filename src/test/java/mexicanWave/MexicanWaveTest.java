@@ -1,10 +1,9 @@
 package mexicanWave;
 
-import org.junit.jupiter.api.Test;
-
+import static org.junit.Assert.assertArrayEquals;
+import org.junit.Test;
+import org.junit.runners.JUnit4;
 import java.util.Arrays;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class MexicanWaveTest {
     @Test
