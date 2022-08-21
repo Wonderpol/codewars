@@ -11,16 +11,18 @@ public class MexicanWave {
         char[] strArr = str.toCharArray();
 
         for (int i = 0; i < strArr.length; i++) {
-            final StringBuilder word = new StringBuilder(str);
-            word.setCharAt(i, Character.toUpperCase(strArr[i]));
+            final StringBuilder word = new StringBuilder();
+
+            if (Character.toString(str.charAt(i)).equals(" ")) continue;
+
+            word
+                    .append(str.substring(0, i))
+                    .append(Character.toUpperCase(str.charAt(i)))
+                    .append(str.substring(i + 1));
 
             result.add(word.toString());
         }
 
         return result.toArray(String[]::new);
-    }
-
-    public static void main(String[] args) {
-        System.out.println(Arrays.toString(wave("hello")));
     }
 }
