@@ -1,7 +1,5 @@
 package createPhoneNumber;
 
-import org.junit.platform.commons.util.StringUtils;
-
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
@@ -14,9 +12,9 @@ public class Kata {
                 .mapToObj(String::valueOf)
                 .collect(Collectors.joining(""));
 
-        result.append("(").append(joinedNumbers.substring(0, 3)).append(") ");
-        result.append(joinedNumbers.substring(3, 6)).append("-");
-        result.append(joinedNumbers.substring(6, 10));
+        result.append("(").append(joinedNumbers, 0, 3).append(") ");
+        result.append(joinedNumbers, 3, 6).append("-");
+        final StringBuilder append = result.append(joinedNumbers.substring(6, 10));
 
         return result.toString();
     }
