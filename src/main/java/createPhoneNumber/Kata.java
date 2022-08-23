@@ -14,7 +14,7 @@ public class Kata {
 
         result.append("(").append(joinedNumbers, 0, 3).append(") ");
         result.append(joinedNumbers, 3, 6).append("-");
-        final StringBuilder append = result.append(joinedNumbers.substring(6, 10));
+        result.append(joinedNumbers.substring(6, 10));
 
         return result.toString();
     }
