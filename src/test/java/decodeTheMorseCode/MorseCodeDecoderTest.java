@@ -1,4 +1,4 @@
-package DecodeTheMorseCode;
+package decodeTheMorseCode;
 
 import org.hamcrest.MatcherAssert;
 import org.junit.jupiter.api.Test;

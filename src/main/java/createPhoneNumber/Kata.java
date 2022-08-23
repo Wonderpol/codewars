@@ -18,5 +18,5 @@ public class Kata {
 
         return result.toString();
     }
-    
+
 }

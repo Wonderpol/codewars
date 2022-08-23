@@ -1,4 +1,4 @@
-package DecodeTheMorseCode;
+package decodeTheMorseCode;
 
 import java.io.File;
 import java.io.FileNotFoundException;
