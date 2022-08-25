@@ -15,8 +15,4 @@ public class Solution {
 
         return result.toString();
     }
-
-    public static void main(String[] args) {
-        System.out.println(toCamelCase("the_Stealth_Warrior"));
-    }
 }
