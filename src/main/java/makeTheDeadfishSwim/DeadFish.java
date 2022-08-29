@@ -25,8 +25,4 @@ public class DeadFish {
                 .mapToInt(Integer::intValue)
                 .toArray();
     }
-
-    public static void main(String[] args) {
-        System.out.println(Arrays.toString(parse("iiisdosos")));
-    }
 }
