@@ -13,20 +13,11 @@ public class DeadFish {
 
         for (final char c : dataChArr) {
             switch (c) {
-                case 'i':
-                    value++;
-                    break;
-                case 'd':
-                    value--;
-                    break;
-                case 's':
-                    value *= value;
-                    break;
-                case 'o':
-                    result.add(value);
-                    break;
-                default:
-                    break;
+                case 'i' -> value++;
+                case 'd' -> value--;
+                case 's' -> value *= value;
+                case 'o' -> result.add(value);
+                default -> throw new IllegalArgumentException("This letter is not valid: " + c);
             }
         }
 
