@@ -35,8 +35,4 @@ public class Kata {
                 .stream()
                 .max(Comparator.comparing(Map.Entry::getKey)).get().getValue();
     }
-
-    public static void main(String[] args) {
-        System.out.println(high("aa b"));
-    }
 }
