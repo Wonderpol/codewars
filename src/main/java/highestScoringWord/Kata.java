@@ -24,11 +24,9 @@ public class Kata {
                 }
 
                 if (result.containsKey(score)) continue;
-
             result.put(score, word);
 
         }
-
         return result.entrySet()
                 .stream()
                 .max(Comparator.comparing(Map.Entry::getKey)).get().getValue();
