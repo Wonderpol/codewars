@@ -11,13 +11,11 @@ public class LongestConsec {
             for (int j = i; j < i + k; j++) {
                 stringBuilder.append(strarr[j]);
             }
-
             if (stringBuilder.toString().length() > result.length()) {
                 result = stringBuilder.toString();
             }
 
         }
-
         return result;
     }
 }
