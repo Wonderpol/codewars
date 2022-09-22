@@ -4,6 +4,9 @@ import java.util.Arrays;
 
 public class Solution {
     public static String whoLikesIt(String ... names) {
+        int a = 300, b = a++, c = --b;
+
+        System.out.println(c);
         switch (names.length) {
             case 0: return "no one likes this";
             case 1: return String.format("%s likes this", names[0]);
