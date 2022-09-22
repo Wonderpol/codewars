@@ -9,7 +9,6 @@ import java.util.Scanner;
 public class MorseCode {
     private static Map<String, String> letters;
     private static final String FILE_PATH = "src/main/resources/MorseCodeLetters.txt";
-
     private static void getDataFromFile() {
         final HashMap<String, String> result = new HashMap<>();
 
