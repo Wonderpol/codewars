@@ -1,25 +1,25 @@
 package backspacesInString;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class BackspacesInString {
     public String cleanString(String s) {
-        final StringBuilder result = new StringBuilder();
+        final StringBuilder string = new StringBuilder();
         final char[] charsS = s.toCharArray();
 
-        result.append(charsS[0]);
-
-        for (int i = 1; i < charsS.length; i++) {
-            if (charsS[i] == '#' && !result.isEmpty()) {
-                result.deleteCharAt(result.length() - 1);
+        for (char ch: charsS) {
+            if (ch == '#' && !string.isEmpty()) {
+                string.deleteCharAt(string.length() - 1);
             } else {
-                result.append(charsS[i]);
+                string.append(ch);
             }
         }
 
-        return result.toString();
+        return string.toString();
     }
 
     public static void main(String[] args) {
         final BackspacesInString bis = new BackspacesInString();
-        System.out.println(bis.cleanString("#######"));
     }
 }
