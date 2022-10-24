@@ -44,9 +44,7 @@ public class BlackBox {
         Object bb3 = new BlackBox(13);
 
         System.out.print(bb2.equals(bb3) + " ");
-
         bb1.updateIns(1, 4);
-
         System.out.print(bb1.equals(bb1) + " ");
 
         System.out.print(bb1.equals(bb3) + " ");
