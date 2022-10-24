@@ -50,9 +50,7 @@ public class BlackBox {
         System.out.print(bb1.equals(bb1) + " ");
 
         System.out.print(bb1.equals(bb3) + " ");
-
         bb2.updateIns(1, 4);
-
         System.out.print(bb2.equals(bb1));
     }
 }
